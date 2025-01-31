@@ -18,7 +18,7 @@
 
   <?php
   //sintaxe com colchetes
-  $bandas = ["Red Hot Chilli Peppers", 'Arctic Monkeys', "Sundiver CA "];
+  $bandas = ["Red Hot Chilli Peppers", 'Arctic Monkeys', "Sundiver CA ", ""];
 
   //sintaxe com função array()
   $cursos = array("HTML5", "Node.js", "PHP");
