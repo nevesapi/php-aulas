@@ -20,6 +20,3 @@ O repositório está em atualização constante, mas até o momento, temos arqui
 ### Ferramentas e tecnologias
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="80" height="80"/>
 
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" width="80" height="80"/>
-
-          
