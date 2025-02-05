@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>05 - Condicionais PHP</title>
+  <title>05 - Condicionais PHP </title>
 
   <style>
     p {
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <h1>Estruturas Condicionais</h1>
+  <h1>Estruturas Condicionais - Refatorado</h1>
   <hr>
 
   <h2>Simples
@@ -35,11 +35,12 @@
     <?php
     $numero = 5;
     if ($numero > 1) {
-      echo "<p>$numero é maior que 1</p>";
-    }
+    ?>
 
-    // Sintaxe omitindo as chaves
-    if ($numero > 1) echo "<p>$numero é maior que 1</p>";
+      <p><?= $numero ?> é maior que 1</p>
+
+    <?php
+    }
     ?>
 
     <hr>
