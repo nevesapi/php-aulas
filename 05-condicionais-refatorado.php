@@ -44,8 +44,6 @@
     ?>
 
     <hr>
-
-
     <h2>Compostas
       <h3><code>if/else</code></h3>
 
@@ -69,8 +67,10 @@
           <p class='urgente'><strong>COMPRE IMEDIATAMENTE</strong></p>
         <?php
         }
-      } else {
         ?>
+      <?php
+      } else {
+      ?>
 
         <p class='normal'>Estoque OK!</p>
 
@@ -83,28 +83,21 @@
         <h3><code>if/elseif/else</code></h3>
 
         <?php
-        $idade = 60;
-        ?>
+        $idade = 59;
 
-        <?php
         if ($idade <= 12) {
-        ?>
-          <p>Criança</p>
-        <?php
+          $texto = "Criança";
         } elseif ($idade <= 17) {
-        ?>
-          <p>Adolescente</p>
-        <?php
+          $texto = "Adolescente";
         } elseif ($idade <= 59) {
-        ?>
-          <p>Adulto</p>
-        <?php
+          $texto = "Adulto";
         } else {
-        ?>
-          <p>Idoso</p>
-        <?php
+          $texto = "Idoso";
         }
         ?>
+
+        <p><?= $texto ?></p>
+
 </body>
 
 </html>
