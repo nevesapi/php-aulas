@@ -53,18 +53,29 @@
       $produto = "Ultrabook Asus";
       $qtdEmEstoque = 3;
       $qtdCritica = 5;
+      ?>
 
-      echo "<h3>Produto: $produto</h3>";
-      echo "<h4>Quantidade em estoque: $qtdEmEstoque</h4>";
+      <h3>Produto: <?= $produto ?></h3>
+      <h4>Quantidade em estoque:<?= $qtdEmEstoque ?></h4>
 
+      <?php
       if ($qtdEmEstoque < $qtdCritica) {
-        echo "<p class='comprar'>É necessário comprar!</p>";
+      ?>
+        <p class='comprar'>É necessário comprar!</p>
+
+        <?php
         if ($qtdEmEstoque === 0) {
-          echo "<p class='urgente'><strong>COMPRE IMEDIATAMENTE</strong></p>";
+        ?>
+          <p class='urgente'><strong>COMPRE IMEDIATAMENTE</strong></p>
+        <?php
         }
       } else {
-        echo "<p class='normal'>Estoque OK!</p>";
-      }
+        ?>
+
+        <p class='normal'>Estoque OK!</p>
+
+      <?php
+      };
       ?>
       <hr>
 
@@ -73,17 +84,26 @@
 
         <?php
         $idade = 60;
+        ?>
 
+        <?php
         if ($idade <= 12) {
-          echo "<p>Criança</p>";
+        ?>
+          <p>Criança</p>
+        <?php
         } elseif ($idade <= 17) {
-          echo "<p>Adolescente</p>";
+        ?>
+          <p>Adolescente</p>
+        <?php
         } elseif ($idade <= 59) {
-          echo "<p>Adulto</p>";
+        ?>
+          <p>Adulto</p>
+        <?php
         } else {
-          echo "<p>Idoso</p>";
+        ?>
+          <p>Idoso</p>
+        <?php
         }
-
         ?>
 </body>
 
