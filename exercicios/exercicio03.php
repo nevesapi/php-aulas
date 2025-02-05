@@ -49,14 +49,16 @@
   $calculaDesconto = $valorDaCompra * $desconto;
 
   //Calculando o valor final da compra
-  $valorFinalDaCompra = $calculaDesconto - $desconto;
+  $valorFinalDaCompra = $valorDaCompra - $calculaDesconto;
 
   //Formatando o valor de said em reais 
   $valorFinalFormatado = number_format($valorFinalDaCompra, 2, ",", ".");
   $valorDaCompraFormatado = number_format($valorDaCompra, 2, ",", ".");
+  $calculaDescontoFormatado = number_format($calculaDesconto, 2, ",", ".");
   ?>
 
   <p>Valor do produto: <strong>R$<?= $valorDaCompraFormatado ?></strong></p>
+  <p>Valor do desconto em R$: <strong>R$<?= $calculaDescontoFormatado ?></strong></p>
   <p>Valor do desconto aplicado: <strong><?= $descontoInteiro ?>%</strong></p>
   <p>Valor final da compra:<strong> R$<?= $valorFinalFormatado ?></strong></p>
 </body>
