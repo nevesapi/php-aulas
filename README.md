@@ -2,6 +2,8 @@
 
 Nesse repositório existem alguns exemplos que vimos durante as aulas de PHP para por em prática a sintaxe básica e conhecer algumas estrutras do PHP.
 
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="80" height="80"/>
+
 ## Sobre o conteudo
 
 O repositório está em atualização constante, mas até o momento, temos arquivos sobre:
@@ -16,7 +18,18 @@ O repositório está em atualização constante, mas até o momento, temos arqui
   + Arrays Indexados
   + Arrays associativos
   + Matriz (array dentro de array)
-
-### Ferramentas e tecnologias
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" width="80" height="80"/>
-
++ Objetos
+  + Criando objetos com 
+    + ``$usuario = new stdClass();``
+  + Inserindo valores
+    +  ``$usuario->nome = "Jhon";``
+  + Saída de dados
+  + Convertendo objetos em arrays 
+    + ``$arrayUsuario = (array) $usuario;``
+  + Convertendo array associativo em objeto 
+    + ``$aluno = ["nome" => "jhon", "Idade" => 25];``
+    + ``$objAluno = (object) $aluno;``
++ Condicionais
+  + Simples - **_if_**
+  + Compostas - **_if/else_**
+  + Encadeada - **_if/elseif/else_**
