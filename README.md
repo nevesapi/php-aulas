@@ -33,3 +33,7 @@ O repositório está em atualização constante, mas até o momento, temos arqui
   + Simples - **_if_**
   + Compostas - **_if/else_**
   + Encadeada - **_if/elseif/else_**
++ Operadores Lógicos
+  + NÃO/NOT - **_!_**
+  + E/AND - **_&&_**
+  + OU/OR - **_||_**
