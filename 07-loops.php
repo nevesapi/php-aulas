@@ -88,10 +88,20 @@
   <p>Versão simplificada do loop for e bem mais simples e fácil de usar com arrays e objetos.</p>
 
   <?php
-  $alunos = ["aluno" => "Denis", "Paulo", "Heloisa"];
+  $alunos = ["Denis", "Paulo", "Heloisa"];
   foreach ($alunos as $aluno) {
   ?>
     <p>Aluno: <?= $aluno ?></p>
+  <?php
+  }
+  ?>
+
+  <h3>Acessando Array associativo</h3>
+  <?php
+  $clubes = ["Corinthians" => "Timão", "Palmeiras" => "Porco"];
+  foreach ($clubes as $key => $value) {
+  ?>
+    <p><?= $key ?> | <?= $value ?></p>
   <?php
   }
   ?>
