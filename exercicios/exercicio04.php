@@ -29,13 +29,13 @@
 
     th,
     td {
-      padding: 12px 15px;
+      padding: .875rem;
       text-align: left;
       border: 1px solid #ddd;
     }
 
     th {
-      background-color: rgb(76, 127, 175);
+      background-color: #4c7faf;
       color: white;
     }
 
