@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exercício 02 PHP e HTML: Arrays</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- 
   <style>
     * {
       font-family: sans-serif;
@@ -64,7 +67,7 @@
       flex-direction: column;
       gap: .5rem;
     }
-  </style>
+  </style> -->
 </head>
 
 <body>
@@ -142,13 +145,13 @@ Desafio: destaque estes dois blocos de conteúdo usando CSS e mostre-os lado a l
     </div>
   </article> -->
 
-  <article>
-    <h2>Usuários</h2>
+  <article class="container">
+    <h2 class="text-center text-uppercase">Usuários</h2>
 
-    <div class="users">
-      <section>
-        <h3>Usuário 1</h3>
-        <ul>
+    <div class="row p-2">
+      <section class="col ">
+        <h3 class="text-center">Usuário 1</h3>
+        <ul class="rounded-3 px-4 py-2 bg-info-subtle">
           <li>Nome: <?= $users["ciclano"]["nome"] ?></li>
           <li>Email: <?= $users["ciclano"]["email"] ?></li>
           <li>idade: <?= $users["ciclano"]["idade"] ?></li>
@@ -157,9 +160,9 @@ Desafio: destaque estes dois blocos de conteúdo usando CSS e mostre-os lado a l
       </section>
 
 
-      <section>
-        <h3>Usuário 2</h3>
-        <ul>
+      <section class="col ">
+        <h3 class="text-center">Usuário 2</h3>
+        <ul class="rounded-3 px-4 py-2 bg-info">
           <li>Nome: <?= $users["fulano"]["nome"] ?></li>
           <li>Email: <?= $users["fulano"]["email"] ?></li>
           <li>Idade: <?= $users["fulano"]["idade"] ?></li>
@@ -168,6 +171,10 @@ Desafio: destaque estes dois blocos de conteúdo usando CSS e mostre-os lado a l
       </section>
     </div>
   </article>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
