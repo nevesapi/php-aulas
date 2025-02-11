@@ -79,6 +79,17 @@
     <?php
     function verificarNumeroNegativo(int $valor): string
     {
+      if ($valor < 0) {
+        return  "É negativo";
+      }
+
+      return "Não é negativo";
+    }
+    ?>
+
+    <?php
+    function verificarNumero(int $valor): string
+    {
       return $valor < 0 ? "É negativo" : "Não é negativo";
     }
     ?>
@@ -95,7 +106,7 @@
 
     <p>Número 10: <?= verificarNumeroNegativo(10) ?></p>
     <p>Número -10: <?= verificarNumeroNegativo(-10) ?></p>
-    <p>Teste de valor?parâmetro errado: <?= verificarNumeroNegativo(0) ?></p>
+    <p>Teste de valor/parâmetro errado: <?= verificarNumeroNegativo(0) ?></p>
   </div>
 
 
