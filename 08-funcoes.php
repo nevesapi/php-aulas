@@ -107,6 +107,31 @@
     <p>Número 10: <?= verificarNumeroNegativo(10) ?></p>
     <p>Número -10: <?= verificarNumeroNegativo(-10) ?></p>
     <p>Teste de valor/parâmetro errado: <?= verificarNumeroNegativo(0) ?></p>
+
+
+    <hr>
+    <h2>Função anônima (ou lâmbida)</h2>
+    <?php
+    $formatarPreco = function (float $valor): string {
+
+      $precoFormatado = "R$ " . number_format($valor, 2, ",", ".");
+      return $precoFormatado;
+    }
+    ?>
+    <p><?= $formatarPreco(1000) ?></p>
+    <p><?= $formatarPreco(1500.88) ?></p>
+    <p><?= $formatarPreco(10500.2598) ?></p>
+    <p><?= $formatarPreco(-1098) ?></p>
+
+    <hr>
+    <h2>Arrow Function</h2>
+    <?php
+    $dobrarValor = fn(int $valor): int => $valor * 2;
+    ?>
+    <p> <?= $dobrarValor(10) ?>.</p>
+    <p> <?= $dobrarValor(100) ?>.</p>
+    <p> <?= $dobrarValor(150) ?>.</p>
+    <p> <?= $dobrarValor(1904) ?>.</p>
   </div>
 
 
