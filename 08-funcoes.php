@@ -77,7 +77,7 @@
 
     <h2>Indução de tipos de dados</h2>
     <?php
-    function verificarNumeroNegativo(int $valor)
+    function verificarNumeroNegativo(int $valor): string
     {
       if ($valor < 0) {
         return "É negativo";
@@ -86,6 +86,16 @@
       }
     }
     ?>
+
+    <!-- tipos comuns para uso com indição
+     
+    string
+    int
+    float
+    array
+    object
+
+    -->
 
     <p>Número 10: <?= verificarNumeroNegativo(10) ?></p>
     <p>Número -10: <?= verificarNumeroNegativo(-10) ?></p>
