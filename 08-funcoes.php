@@ -79,11 +79,7 @@
     <?php
     function verificarNumeroNegativo(int $valor): string
     {
-      if ($valor < 0) {
-        return "É negativo";
-      } else {
-        return "Não é negativo";
-      }
+      return $valor < 0 ? "É negativo" : "Não é negativo";
     }
     ?>
 
