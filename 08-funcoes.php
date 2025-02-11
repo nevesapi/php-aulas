@@ -60,6 +60,36 @@
     <?php } else { ?>
       <p class="alert alert-danger">O Resultado 3 é menor que 10</p>
     <?php } ?>
+
+    <hr>
+
+    <h3>Função com parâmetros opcionais</h3>
+    <?php
+    function exibirSaudacao($mensagem, $pessoa = "")
+    {
+      return "Olá, $mensagem $pessoa!";
+    }
+    ?>
+    <p class="alert alert-success">Mensagem 1 - <?= exibirSaudacao("Bom dia", "Denis") ?></p>
+    <p class="alert alert-success">Mensagem 1 - <?= exibirSaudacao("Bom dia") ?></p>
+
+    <hr>
+
+    <h2>Indução de tipos de dados</h2>
+    <?php
+    function verificarNumeroNegativo(int $valor)
+    {
+      if ($valor < 0) {
+        return "É negativo";
+      } else {
+        return "Não é negativo";
+      }
+    }
+    ?>
+
+    <p>Número 10: <?= verificarNumeroNegativo(10) ?></p>
+    <p>Número -10: <?= verificarNumeroNegativo(-10) ?></p>
+    <p>Teste de valor?parâmetro errado: <?= verificarNumeroNegativo(0) ?></p>
   </div>
 
 
