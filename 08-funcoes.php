@@ -29,6 +29,37 @@
     </div>
 
     <hr>
+
+    <h2>Função com para parâmetros (ou argumentos)</h2>
+    <?php
+    function somar($valor1, $valor2)
+    {
+      return $valor1 + $valor2;
+    }
+    ?>
+
+    <p>Resultado 1 - <strong><?= somar(10, 5) ?></strong></p>
+    <p>Resultado 2 -<strong> <?= somar(23, 10) ?></strong></p>
+
+    <?php
+    $resultado3 = somar(6, 5);
+    ?>
+    <p>Resultado 3.1 -<strong> <?= $resultado3 ?></strong></p>
+
+    <?php if ($resultado3 > 10) { ?>
+      <p class="alert alert-success">O Resultado 3 é maior que 10</p>
+    <?php } else { ?>
+      <p class="alert alert-danger">O Resultado 3 é menor que 10</p>
+    <?php } ?>
+
+    <hr>
+
+    <h2>Usando uma função como parte de uma condição</h2>
+    <?php if (somar(5, 2) > 10) { ?>
+      <p class="alert alert-success">O Resultado 3 é maior que 10</p>
+    <?php } else { ?>
+      <p class="alert alert-danger">O Resultado 3 é menor que 10</p>
+    <?php } ?>
   </div>
 
 
