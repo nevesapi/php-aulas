@@ -149,8 +149,48 @@
     echo $ataqueSanitizado;
 
     ?>
+    <hr>
+    <h2>Segurança(criptografia de dados)</h2>
+    <h3>Algoritmos e Recursos</h3>
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">MD5</li>
+      <li class="list-group-item list-group-item-info">SHA-1</li>
+      <li class="list-group-item list-group-item-info">SHA-256</li>
+      <li class="list-group-item list-group-item-info">password_hash() e password_verify()</li>
+    </ul>
+
+    <?php
+    $senhaTextoPuro = "123Senaclasdfoasd";
+    $SenhaCodificadaComMD5 = md5($senhaTextoPuro);
+    $SenhaCodificadaComSHA1 = sha1($senhaTextoPuro);
+    $SenhaCodificadaComSHA256 = hash("sha256", $senhaTextoPuro);
+
+    ?>
+    <hr>
+    <h3>Saídas</h3>
+    <p class="bg-info p-2 text-dark bg-opacity-50">Senha (texto puro): <?= $senhaTextoPuro ?></p>
+    <p class="bg-info p-2 text-dark bg-opacity-50">Senha com MD5: <?= $SenhaCodificadaComMD5 ?> | <?= strlen($SenhaCodificadaComMD5) ?></p>
+    <p class="bg-info p-2 text-dark bg-opacity-50">Senha com SHA1: <?= $SenhaCodificadaComSHA1 ?> | <?= strlen($SenhaCodificadaComSHA1) ?></p>
+    <p class="bg-info p-2 text-dark bg-opacity-50">Senha com SHA256: <?= $SenhaCodificadaComSHA256 ?> | <?= strlen($SenhaCodificadaComSHA256) ?></p>
 
     <hr>
+    <p class="alert alert-info">Metodo/Algoritmo ideal atualmente </p>
+    <?php
+    $senhaCodificada = password_hash($senhaTextoPuro, PASSWORD_DEFAULT);
+    ?>
+    <p class="alert alert-success">Senha com password_hash(): <?= $senhaCodificada ?> | <?= strlen($senhaCodificada) ?></p>
+    <hr>
+
+    <h4>Comparando a senha informada com a senha codificada</h4>
+
+    <?php
+    $senhaDigitada = "123Senaclasdfoasd";
+    if (password_verify($senhaDigitada, $senhaCodificada)) {
+      echo "Acertou";
+    } else {
+      echo "Some daqui meooo";
+    }
+    ?>
   </div>
 
 
