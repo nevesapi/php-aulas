@@ -1,3 +1,4 @@
+<?php require "recursos.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,27 @@
 <body>
   <div class="container">
     <h1>10 - Include e Require</h1>
+    <p>Modulariazação e Inclusão de recursos</p>
+
     <hr>
+
+    <h2><?= ESCOLA ?></h2>
+    <p>Estamos fazendo o curso de <?= $curso ?></p>
+
+    <ul class="list-group  w-25">
+      <?php foreach ($tecnologias as $tecnologia) { ?>
+        <li class="list-group-item list-group-item-info"><?= $tecnologia ?></li>
+
+      <?php } ?>
+    </ul>
+
+    <hr>
+    <p class="bg-success p-2 text-white bg-opacity-75 rounded-2">O aluno Ciclano tem 25 anos e é <?= verificarIdade(20) ?>de idade!</p>
+
+    <article>
+      <h2>Titulo qualquer ...</h2>
+      <?php include "textos.php" ?>
+    </article>
   </div>
 
 
