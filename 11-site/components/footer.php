@@ -1,6 +1,19 @@
 </main>
 <footer>
   <p>Site criado com worpress.</p>
+  <?php
+
+  // Criar um objeto DateTime
+  $data = new DateTime();
+
+  // Usar IntlDateFormatter para formatar a data por extenso
+  $fmt = new IntlDateFormatter('pt_BR', IntlDateFormatter::LONG, IntlDateFormatter::MEDIUM);
+
+  $data_extenso = $fmt->format($data);
+
+
+  ?>
+  <p><?= $data_extenso ?></p>
 </footer>
 
 </div>
