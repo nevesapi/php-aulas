@@ -18,6 +18,7 @@
         <a href="duvidas.php">Dúvidas</a>
       </nav>
     </header>
+
     <main>
       <h2>Página Dúvidas</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci sit beatae quam! Dolorum labore nesciunt, maiores sed dicta illum eveniet exercitationem provident voluptates inventore distinctio enim recusandae, magnam ducimus? Sint.</p>
@@ -27,12 +28,13 @@
         <summary>Como se cadastrar?</summary>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptates animi illo harum officiis quos quasi. Similique obcaecati dolore, nesciunt eos asperiores explicabo aliquam dolor omnis molestias suscipit, sint eveniet?</p>
       </details>
-      
+
       <details>
         <summary>Como se cadastrar?</summary>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptates animi illo harum officiis quos quasi. Similique obcaecati dolore, nesciunt eos asperiores explicabo aliquam dolor omnis molestias suscipit, sint eveniet?</p>
       </details>
     </main>
+
     <footer>
       <p>Site criado com worpress.</p>
     </footer>
