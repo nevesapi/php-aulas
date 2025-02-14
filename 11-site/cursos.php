@@ -1,4 +1,4 @@
-<?php require "cabecalho.php" ?>
+<?php require "./components/cabecalho.php" ?>
 
 <h2>Página Cursos</h2>
 <p>Veja os cursos disponiveis</p>
@@ -7,4 +7,5 @@
   <li>Direção Defensiva</li>
   <li>Como escapar de um terremoto</li>
 </ul>
-<?php require "footer.php" ?>
+
+<?php require "./components/footer.php" ?>
