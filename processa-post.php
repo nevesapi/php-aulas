@@ -20,13 +20,14 @@
 
       <?php
       //capturando dados
-      $nome = $_POST["nome"];
-      $email = $_POST["email"];
-      $idade = $_POST["idade"];
+      $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+      $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+      $idade = filter_input(INPUT_POST, "idade", FILTER_SANITIZE_NUMBER_INT);
 
-      $mensagem = $_POST["mensagem"];
-      $interesses = $_POST["interesses"] ?? []; //Nullish Coaslescing Operator
-      $informativos = $_POST["informativos"] ?? [];
+      $mensagem = filter_input(INPUT_POST, "mensagem", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+      $interesses = filter_var_array($_POST["interesses"] ?? [], FILTER_SANITIZE_FULL_SPECIAL_CHARS); //Nullish Coaslescing Operator
+
+      $informativos = filter_var_array($_POST["informativos"] ?? [], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
       ?>
 
