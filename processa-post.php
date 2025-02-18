@@ -12,44 +12,47 @@
   <div class="container">
     <h1 class="text-center">Trabalhando com o POST</h1>
     <hr>
-    <?php
+    <?php if (empty($_POST["nome"]) || empty($_POST["email"])) { ?>
+      <p class="alert alert-primary">Por favor, preencha o campo Nome e Email! </p>
+    <?php } else { ?>
 
-    //capturando dados
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $idade = $_POST["idade"];
+      <?php
+      //capturando dados
+      $nome = $_POST["nome"];
+      $email = $_POST["email"];
+      $idade = $_POST["idade"];
 
-    $mensagem = $_POST["mensagem"];
-    $interesses = $_POST["interesses"] ?? []; //Nullish Coaslescing Operator
-    $informativos = $_POST["informativos"];
-    // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
-    ?>
+      $mensagem = $_POST["mensagem"];
+      $interesses = $_POST["interesses"] ?? []; //Nullish Coaslescing Operator
+      $informativos = $_POST["informativos"];
+      // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
+      ?>
 
-    <!-- Exibindo dados -->
-    <h2 class="text-center">Informações do usuário: </h2>
-    <ul class="list-group w-50">
-      <li class="list-group-item list-group-item-action">Nome: <strong><?= $nome ?></strong></li>
-      <li class="list-group-item list-group-item-action">Email: <strong><?= $email ?></strong></li>
-      <li class="list-group-item list-group-item-action">Idade: <strong><?= $idade ?></strong></li>
-      <li class="list-group-item list-group-item-action">Mensagem: <strong><?= $mensagem ?></strong></li>
-      <li class="list-group-item list-group-item-action">Deseja receber informativos: <strong><?= $informativos ?></strong></li>
+      <!-- Exibindo dados -->
 
-      <!-- convertendo o array em string -->
+      <h2 class=" text-center">Informações do usuário: </h2>
+      <ul class="list-group w-50">
+        <li class="list-group-item list-group-item-action">Nome: <strong><?= $nome ?></strong></li>
+        <li class="list-group-item list-group-item-action">Email: <strong><?= $email ?></strong></li>
+        <li class="list-group-item list-group-item-action">Idade: <strong><?= $idade ?></strong></li>
+        <li class="list-group-item list-group-item-action">Mensagem: <strong><?= $mensagem ?></strong></li>
+        <li class="list-group-item list-group-item-action">Deseja receber informativos: <strong><?= $informativos ?></strong></li>
 
-      <?php if ($interesses) { ?>
-        <li class="list-group-item list-group-item-action">Interesses:<strong> <?= implode(", ", $interesses) ?></strong></li>
+        <!-- convertendo o array em string -->
+        <?php if ($interesses) { ?>
+          <li class="list-group-item list-group-item-action">Interesses:<strong> <?= implode(", ", $interesses) ?></strong></li>
 
-        <li class="list-group-item list-group-item-action">Interesses | usando o <code>foreach</code>:
-          <ul class="list-group w-75">
-            <?php foreach ($interesses as $interesse) { ?>
-              <li class="list-group-item list-group-item-action">Interesse: <strong><?= $interesse ?></strong></li>
-            <?php } ?>
-          </ul>
-        </li>
-      <?php } ?>
+          <li class="list-group-item list-group-item-action">Interesses | usando o <code>foreach</code>:
+            <ul class="list-group w-75">
+              <?php foreach ($interesses as $interesse) { ?>
+                <li class="list-group-item list-group-item-action">Interesse: <strong><?= $interesse ?></strong></li>
+              <?php } ?>
+            </ul>
+          </li>
+        <?php } ?>
 
-
-    </ul>
+      </ul>
+    <?php } ?>
   </div>
 
 
