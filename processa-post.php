@@ -26,7 +26,7 @@
 
       $mensagem = $_POST["mensagem"];
       $interesses = $_POST["interesses"] ?? []; //Nullish Coaslescing Operator
-      $informativos = $_POST["informativos"];
+      $informativos = $_POST["informativos"] ?? [];
       // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
       ?>
 
@@ -37,7 +37,11 @@
         <li class="list-group-item list-group-item-action">Email: <strong><?= $email ?></strong></li>
         <li class="list-group-item list-group-item-action">Idade: <strong><?= $idade ?></strong></li>
         <li class="list-group-item list-group-item-action">Mensagem: <strong><?= $mensagem ?></strong></li>
-        <li class="list-group-item list-group-item-action">Deseja receber informativos: <strong><?= $informativos ?></strong></li>
+
+        <?php if ($informativos) { ?>
+          <li class="list-group-item list-group-item-action">Deseja receber informativos: <strong><?= $informativos ?></strong></li>
+        <?php } ?>
+
 
         <!-- convertendo o array em string -->
         <?php if ($interesses) { ?>
