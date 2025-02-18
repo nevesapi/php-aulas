@@ -12,8 +12,10 @@
   <div class="container">
     <h1 class="text-center">Trabalhando com o POST</h1>
     <hr>
+
+    <!-- validação do formulário -->
     <?php if (empty($_POST["nome"]) || empty($_POST["email"])) { ?>
-      <p class="alert alert-primary">Por favor, preencha o campo Nome e Email! </p>
+      <p class="alert alert-warning">Por favor, preencha o campo Nome e Email! </p>
     <?php } else { ?>
 
       <?php
@@ -29,7 +31,6 @@
       ?>
 
       <!-- Exibindo dados -->
-
       <h2 class=" text-center">Informações do usuário: </h2>
       <ul class="list-group w-50">
         <li class="list-group-item list-group-item-action">Nome: <strong><?= $nome ?></strong></li>
