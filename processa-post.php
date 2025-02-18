@@ -34,16 +34,19 @@
       <li class="list-group-item list-group-item-action">Mensagem: <?= $mensagem ?></li>
 
       <!-- convertendo o array em string -->
-      <li class="list-group-item list-group-item-action">Interesses: <?= implode(", ", $interesses) ?></li>
 
-      <li class="list-group-item list-group-item-action">Interesses | usando o <code>foreach</code>:
+      <?php if ($interesses) { ?>
+        <li class="list-group-item list-group-item-action">Interesses: <?= implode(", ", $interesses) ?></li>
 
-        <ul class="list-group w-75">
-          <?php foreach ($interesses as $interesse) { ?>
-            <li class="list-group-item list-group-item-action">Interesse: <?= $interesse ?></li>
-          <?php } ?>
-        </ul>
-      </li>
+        <li class="list-group-item list-group-item-action">Interesses | usando o <code>foreach</code>:
+
+          <ul class="list-group w-75">
+            <?php foreach ($interesses as $interesse) { ?>
+              <li class="list-group-item list-group-item-action">Interesse: <?= $interesse ?></li>
+            <?php } ?>
+          </ul>
+        </li>
+      <?php } ?>
 
 
     </ul>
