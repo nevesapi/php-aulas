@@ -18,31 +18,31 @@
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $idade = $_POST["idade"];
-    $mensagem = $_POST["mensagem"];
-    $interesses = $_POST["interesses"] ?? [];
-    // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
-    var_dump($interesses);
 
+    $mensagem = $_POST["mensagem"];
+    $interesses = $_POST["interesses"] ?? []; //Nullish Coaslescing Operator
+    $informativos = $_POST["informativos"];
+    // $interesses = isset($_POST["interesses"]) ? $_POST["interesses"] : [];
     ?>
 
     <!-- Exibindo dados -->
     <h2 class="text-center">Informações do usuário: </h2>
     <ul class="list-group w-50">
-      <li class="list-group-item list-group-item-action">Nome: <?= $nome ?></li>
-      <li class="list-group-item list-group-item-action">Email: <?= $email ?></li>
-      <li class="list-group-item list-group-item-action">Idade: <?= $idade ?></li>
-      <li class="list-group-item list-group-item-action">Mensagem: <?= $mensagem ?></li>
+      <li class="list-group-item list-group-item-action">Nome: <strong><?= $nome ?></strong></li>
+      <li class="list-group-item list-group-item-action">Email: <strong><?= $email ?></strong></li>
+      <li class="list-group-item list-group-item-action">Idade: <strong><?= $idade ?></strong></li>
+      <li class="list-group-item list-group-item-action">Mensagem: <strong><?= $mensagem ?></strong></li>
+      <li class="list-group-item list-group-item-action">Deseja receber informativos: <strong><?= $informativos ?></strong></li>
 
       <!-- convertendo o array em string -->
 
       <?php if ($interesses) { ?>
-        <li class="list-group-item list-group-item-action">Interesses: <?= implode(", ", $interesses) ?></li>
+        <li class="list-group-item list-group-item-action">Interesses:<strong> <?= implode(", ", $interesses) ?></strong></li>
 
         <li class="list-group-item list-group-item-action">Interesses | usando o <code>foreach</code>:
-
           <ul class="list-group w-75">
             <?php foreach ($interesses as $interesse) { ?>
-              <li class="list-group-item list-group-item-action">Interesse: <?= $interesse ?></li>
+              <li class="list-group-item list-group-item-action">Interesse: <strong><?= $interesse ?></strong></li>
             <?php } ?>
           </ul>
         </li>
