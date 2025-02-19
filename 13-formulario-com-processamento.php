@@ -18,14 +18,14 @@
       $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
       $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
     ?>
+
       <section>
         <h2>Dados</h2>
         <p>Nome: <?= $nome ?></p>
         <p>Nome: <?= $email ?></p>
       </section>
-    <?php
-    } else {
-    ?>
+
+    <?php } else { ?>
 
       <form action="" method="post" class="w-50 bg-danger-subtle p-3 rounded-2">
 
